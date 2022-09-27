@@ -6,9 +6,11 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:54:37 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/09/23 20:54:34 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/09/27 19:16:00 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -23,21 +25,10 @@ int	ft_atoi(const char *str)
 		sign *= -1;
 	if (*str == '+' || *str == '-')
 		++str;
-	while (*str >= '0' && *str <= '9')
+	while (ft_isdigit(*str))
 	{
 		value = value * 10 + (*str - '0');
 		++str;
 	}
 	return (value * sign);
 }
-
-/*#include <stdio.h>
-#include <stdlib.h>
-int	main()
-{
-	const char	*str = "\v\f+-641cacas";
-
-	printf("F%d\n", atoi(str));
-	printf("P%d", ft_atoi(str));
-	return (0);
-}*/

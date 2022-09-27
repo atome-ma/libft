@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 18:53:23 by pbengoec          #+#    #+#             */
-/*   Updated: 2022/09/26 18:40:36 by atome-ma         ###   ########.fr       */
+/*   Created: 2022/09/27 16:27:38 by atome-ma          #+#    #+#             */
+/*   Updated: 2022/09/27 19:11:00 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	*ft_memset(void *dest, int ch, size_t count)
 {
-	if (c >= 97 && c <= 122)
+	size_t			i;
+	unsigned char	*str;
+
+	str = (unsigned char *)dest;
+	i = 0;
+	while (i < count)
 	{
-		c -= 32;
+		str[i] = (unsigned char)ch;
+		i++;
 	}
-	return (c);
+	return (&dest[0]);
 }

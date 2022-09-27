@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:46:13 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/09/23 20:09:18 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/09/26 19:51:10 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,3 @@ int	ft_isalpha(int c)
 	}
 	return (0);
 }
-
-// int main()
-// {
-// 	printf("Function is Alpha value = 'A' \n");
-// 	printf("Solution: %d\n",ft_isalpha('A'));
-// }
