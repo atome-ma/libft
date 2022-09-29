@@ -6,17 +6,17 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/09/27 21:22:57 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/09/29 19:57:05 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stddef.h>
-# include <unistd.h>
+# include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
@@ -32,5 +32,10 @@ char	*ft_strrchr(const char *str, int ch);
 void	*ft_memset(void *dest, int ch, size_t count);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t count);
+/*The memmove() function copies len bytes from string src to string dst.  
+The two strings may over-lap; the copy is always 
+done in a non-destructive manner.*/
+void	*ft_memmove(void *dest, const void *src, size_t count);
+size_t	strlcpy(char dst, const char src, size_t dstsize);
 
 #endif
