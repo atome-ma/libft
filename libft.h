@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/09/29 19:57:05 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/09/29 21:23:30 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t count);
 The two strings may over-lap; the copy is always 
 done in a non-destructive manner.*/
 void	*ft_memmove(void *dest, const void *src, size_t count);
-size_t	strlcpy(char dst, const char src, size_t dstsize);
+/*The stpcpy() and strcpy() functions copy the string src to dst 
+(including the terminating `\0' character.)*/
+size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
 
 #endif
