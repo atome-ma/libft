@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 19:54:37 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/09/30 21:59:42 by atome-ma         ###   ########.fr       */
+/*   Created: 2022/09/29 22:32:48 by atome-ma          #+#    #+#             */
+/*   Updated: 2022/09/30 21:56:54 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+size_t	ft_strlcat(char *dest, const char *src, size_t destsize)
 {
-	int	sign;
-	int	value;
+	size_t	slen;
+	size_t	dlen;
 
-	sign = 1;
-	value = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		++str;
-	if (*str == '-')
-		sign *= -1;
-	if (*str == '+' || *str == '-')
-		++str;
-	while (ft_isdigit(*str))
+	dlen = ft_strlen(dest);
+	slen = 0;
+	if (destsize > dlen)
 	{
-		value = value * 10 + (*str - '0');
-		++str;
+		while (slen < (destsize - dlen - 1) && src[slen])
+		{
+			dest[dlen + slen] = src[slen];
+			slen++;
+		}
+		if (slen <= (destsize - dlen))
+			dest[dlen + slen] = 0;
+		return (dlen + ft_strlen(src));
 	}
-	return (value * sign);
+	return (destsize + ft_strlen(src));
 }
