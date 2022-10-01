@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/01 16:03:03 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:31:44 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,18 @@
 
 /* The isalpha() function tests for any character for which isupper(3)
  or islower(3) is true. The value of the argument must be representable 
- as an unsigned char or the value of EOF. */
+ as an unsigned char or the value of EOF. 
+ Returns zero if the character tests false and returns non-zero
+ if the character tests true.*/
 int		ft_isalpha(int c);
+/* The isalnum() function tests for any character for which isalpha(3)
+or isdigit(3) is true.  The value of the argument must be representable
+as an unsigned char or the value of EOF. 
+Returns zero if the character tests false and returns non-zero
+if the character tests true.*/
 int		ft_isalnum(int c);
+/* The isascii() function tests for an ASCII character, which is 
+any character between 0 and octal 0177 inclusive. */
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
@@ -67,5 +76,10 @@ as the string s1 is greater than,equal to, or less than the string s2.
 The comparison is done using unsigned characters, so that `\200' is 
 greater than `\0'.*/
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+/* The memchr() function locates the first occurrence of c 
+(converted to an unsigned char) in string s.
+returns a pointer to the byte located, or NULL if no such
+byte exists within n bytes. */
+void	*ft_memchr(const void *s, int c, size_t n);
 
 #endif
