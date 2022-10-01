@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/01 16:31:44 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/01 17:52:22 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,13 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 returns a pointer to the byte located, or NULL if no such
 byte exists within n bytes. */
 void	*ft_memchr(const void *s, int c, size_t n);
+/* The memcmp() function compares byte string s1 against byte 
+string s2. Both strings are assumed to be n bytes long. returns 
+zero if the two strings are identical, otherwise returns the difference 
+between the first two differing bytes (treated as unsigned char values,
+ so that `\200' is greater than `\0', for example).  Zero-length
+strings are always identical.  This behavior is not required by C 
+and portable code should only depend on the sign of the returned value. */
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif
