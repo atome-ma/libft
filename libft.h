@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/09/29 22:41:42 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/01 15:21:31 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,13 @@ was longer than dstsize (in practice this should not happen as
 it means that either dstsize is incorrect or that dst is not a proper string).
 If the src and dst strings overlap, the behavior is undefined.*/
 size_t	ft_strlcat(char *dest, const char *src, size_t destsize);
+/*The strncmp() function compares not more than n characters.  Because
+strncmp() is designed for comparing strings rather than binary data,
+characters that appear after a `\0' character are not compared.
+return an integer greater than, equal to, or less than 0, according 
+as the string s1 is greater than,equal to, or less than the string s2.
+The comparison is done using unsigned characters, so that `\200' is 
+greater than `\0'.*/
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
