@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/01 15:21:31 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:03:03 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+/* The isalpha() function tests for any character for which isupper(3)
+ or islower(3) is true. The value of the argument must be representable 
+ as an unsigned char or the value of EOF. */
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
@@ -29,8 +32,17 @@ int		ft_toupper(int c);
 int		ft_atoi(const char *str);
 char	*ft_strchr(const char *str, int ch);
 char	*ft_strrchr(const char *str, int ch);
+/* The memset() function writes len bytes of value c 
+(converted to an unsigned char) to the string b. 
+returns its first argument. */
 void	*ft_memset(void *dest, int ch, size_t count);
+/* The bzero() function writes n zeroed bytes to the string s.
+If n is zero, bzero() does nothing. */
 void	ft_bzero(void *s, size_t n);
+/* The memcpy() function copies n bytes from memory area src to memory
+area dst. If dst and src overlap, behavior is undefined.  Applications 
+in which dst and src might over-lap should use memmove(3) instead.
+return the original value of dst.*/
 void	*ft_memcpy(void *dest, const void *src, size_t count);
 /*The memmove() function copies len bytes from string src to string dst.  
 The two strings may over-lap; the copy is always 
