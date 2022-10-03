@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/01 17:52:22 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/03 19:48:01 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,6 @@ between the first two differing bytes (treated as unsigned char values,
 strings are always identical.  This behavior is not required by C 
 and portable code should only depend on the sign of the returned value. */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(const char *str, const char *substr, size_t len);
 
 #endif

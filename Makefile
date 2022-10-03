@@ -6,7 +6,7 @@
 #    By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 19:45:15 by atome-ma          #+#    #+#              #
-#    Updated: 2022/10/01 17:28:19 by atome-ma         ###   ########.fr        #
+#    Updated: 2022/10/03 19:45:36 by atome-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRCS		= ft_isalnum.c  \
 			  ft_strncmp.c  \
 			  ft_memchr.c   \
 			  ft_memcmp.c   \
+			  ft_strnstr.c  \
 			
 			  
 OBJS		= ${SRCS:.c=.o}
