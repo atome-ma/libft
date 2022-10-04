@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:33:34 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/03 22:35:27 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/04 18:54:50 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@ char	*ft_strnstr(const char *str, const char *substr, size_t len)
 	size_t	j;
 
 	i = 0;
-	j = 0;
-	if (substr[0] == 0 || substr == str)
+	if (substr[0] == 0)
 		return ((char *)str);
 	while (str[i])
 	{
+	j = 0;
 		while (str[i + j] == substr[j] && len > (i + j))
 		{
-			if (str[i + j] == 0 || substr[j] == 0)
+			if (str[i + j] == 0 && substr[j] == 0)
 				return ((char *)&str[i]);
 			j++;
 		}
-		if ((substr[j] == 0) && (substr[j - 1] == str[i + j - 1]))
+		if (substr[j] == 0)
 			return ((char *)str + i);
 		i++;
 	}	
@@ -50,4 +50,5 @@ int	main(void)
 	printf("Str        : %s\n", str);
 	printf("My fuction : %s\n", ft_strnstr(str, substr, len));
 	return (0);
-} */
+}
+ */
