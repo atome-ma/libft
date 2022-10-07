@@ -6,7 +6,7 @@
 #    By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 19:45:15 by atome-ma          #+#    #+#              #
-#    Updated: 2022/10/06 21:12:58 by atome-ma         ###   ########.fr        #
+#    Updated: 2022/10/07 20:55:15 by atome-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ ${NAME}	:
 all		:	${NAME}
 
 clean	:
-		${RM} ${OBJS}
+		${RM} ${OBJS} *.h.gch a.out
 	
 fclean	:	clean
 		${RM} ${NAME}

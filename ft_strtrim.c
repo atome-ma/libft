@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:28:15 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/07 20:38:57 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/07 20:50:29 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t			end;
 	char			*str;
 
-	if (!s1[0])
-		return (ft_strdup(""));
-	if (!set)
+	if (!s1[0] || !set)
 		return (ft_strdup(""));
 	start = 0;
 	while (s1[start] && (ft_strchr(set, s1[start])))
