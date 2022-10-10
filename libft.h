@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/06 20:28:34 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/09 12:05:11 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 /* Append string s1 and s2 in new string with malloc. 
 if the reserve of mem fail, return NULL, else strjoin Return new string*/
 char	*ft_strjoin(char const *s1, char const *s2);
+/* A str *(s1) is trimmed with a reference str*(set) to char to trim. 
+Return a copy of a str with the char speciefied in 'set' removed from
+the beginning and the end of the string*/
 char	*ft_strtrim(char const *s1, char const *set);
+/*Split Strings Based on Delimiter witch malloc*/
+char	**ft_split(char const *s, char c);
 
 #endif
