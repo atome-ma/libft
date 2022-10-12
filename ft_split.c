@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 11:52:13 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/10 20:05:57 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/12 17:15:20 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_count_words(const char *str, char delim);
 char	**ft_split(char const *s, char c);
-void	**ft_free_mem(char **str, size_t pos);
+void	**ft_free_mem(char **str);
 char	**ft_fill(const char *s, char **split, char c);
 
 char	**ft_split(char const *s, char c)
@@ -56,53 +56,60 @@ size_t	ft_count_words(const char *str, char delim)
 /* fill the array with num words of rows and  */
 char	**ft_fill(char const *s, char **split, char c)
 {
-	size_t	start;
 	size_t	idx;
-	int		row;
+	size_t	row;
+	int		pos;
 
 	idx = 0;
-	start = 0;
+	pos = -1;
 	row = 0;
-	while (s[idx])
+	if (ft_strlen(s) == 0)
+		return (split);
+	while (idx <= ft_strlen(s))
 	{
-		if (s[idx] == c)
+		if (s[idx] != c && pos < 0)
+			pos = idx;
+		else if ((s[idx] == c && pos >= 0) || idx == ft_strlen(s))
 		{
-			while (s[idx] && s[idx] == c)
-				idx++;
-			split[row] = ft_substr(s, start, (idx - start - 1));
-			if (split == 0)
-				ft_free_mem(split, row);
-				row++;
+			split[row] = ft_substr(s, pos, (idx - pos));
+			if (split[row] == 0)
+				return (ft_free_mem(split), NULL);
+			pos = -1;
+			row++;
 		}
-		if (s[idx] != c)
-		{
-			start = idx;
-			while (s[idx] && s[idx] != c)
-				idx++;
-		}
+		idx++;
 	}
 	return (split);
 }
 
-void	**ft_free_mem(char **str, size_t pos)
+void	**ft_free_mem(char **str)
 {
 	size_t	i;
 
 	i = 0;
-	while (i >= 0)
+	while (str[i] != NULL)
 	{
 		free(str[i]);
+		i++;
 	}
-	free(str[pos]);
+	free(str);
 	return (0);
 }
 
-int	main(void)
+/* int	main(void)
 {
-	const char	*str = "Hellos my friend whats eeeever never";
-	char 	delim = 'e';
+	const char	*str = "                  olol k l";
+	char 	delim = ' ';
+	char	**new;
+	int		i;
 
-	
-	write (1, &str, 15);
+	i = 0;
+	printf("%zu", ft_count_words(str, delim));
+	new = ft_split(str, delim);
+	while (new[i])
+	{
+		write (1, &new[0][i], 1);
+		i++;
+	}
 	return (0);
-}
+} */
