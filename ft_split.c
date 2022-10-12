@@ -6,16 +6,15 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 11:52:13 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/12 17:15:20 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/12 21:14:41 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_words(const char *str, char delim);
-char	**ft_split(char const *s, char c);
-void	**ft_free_mem(char **str);
-char	**ft_fill(const char *s, char **split, char c);
+static size_t	ft_count_words(const char *str, char delim);
+static void		**ft_free_mem(char **str);
+static char		**ft_fill(const char *s, char **split, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -32,7 +31,7 @@ char	**ft_split(char const *s, char c)
 }
 
 /* counts words with the delimiter 'delim' in the strings */
-size_t	ft_count_words(const char *str, char delim)
+static size_t	ft_count_words(const char *str, char delim)
 {
 	unsigned int	words;
 	unsigned int	flag;
@@ -54,7 +53,7 @@ size_t	ft_count_words(const char *str, char delim)
 }
 
 /* fill the array with num words of rows and  */
-char	**ft_fill(char const *s, char **split, char c)
+static char	**ft_fill(char const *s, char **split, char c)
 {
 	size_t	idx;
 	size_t	row;
@@ -82,7 +81,7 @@ char	**ft_fill(char const *s, char **split, char c)
 	return (split);
 }
 
-void	**ft_free_mem(char **str)
+static void	**ft_free_mem(char **str)
 {
 	size_t	i;
 
