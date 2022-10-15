@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/15 12:54:55 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/15 14:02:48 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,5 +110,11 @@ The string created from the successive applications
 of f. Returns NULL if the allocation fails.*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+/* fd: The file descriptor on which to write. */
+void	ft_putchar_fd(char c, int fd);
+/* Outputs the string ’s’ to the given file descriptor. */
+void	ft_putstr_fd(char *s, int fd);
+/* Outputs the string ’s’ to the given file descriptor followed by a newline. */
+void	ft_putendl_fd(char *s, int fd);
 
 #endif
