@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/12 17:47:01 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/15 12:37:41 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,11 @@ char	*ft_strtrim(char const *s1, char const *set);
 /*Split Strings Based on Delimiter witch malloc and free*/
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+/*Applies the function f to each character of the
+string s to create a new string (with malloc(3))
+resulting from successive applications of f.
+The string created from the successive applications
+of f. Returns NULL if the allocation fails.*/
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
