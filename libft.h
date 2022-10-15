@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/15 14:02:48 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/15 14:14:59 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 /* Outputs the string ’s’ to the given file descriptor followed by a newline. */
 void	ft_putendl_fd(char *s, int fd);
+/**/
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
