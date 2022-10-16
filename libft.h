@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/16 17:35:45 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/16 19:02:24 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,5 +135,10 @@ int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 /* Adds the node ’new’ at the end of the list. */
 void	ft_lstadd_back(t_list **lst, t_list *new);
+/* Takes as a parameter a node and frees the memory 
+of the node’s content using the function ’del’ given 
+as a parameter and free the node. 
+The memory of ’next’ must not be freed. */
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif
