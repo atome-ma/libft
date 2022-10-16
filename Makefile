@@ -6,7 +6,7 @@
 #    By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 19:45:15 by atome-ma          #+#    #+#              #
-#    Updated: 2022/10/15 14:15:26 by atome-ma         ###   ########.fr        #
+#    Updated: 2022/10/16 14:06:49 by atome-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,22 +48,26 @@ SRCS		= ft_isalnum.c  \
 			  ft_putstr_fd.c  \
 			  ft_putendl_fd.c \
 			  ft_putnbr_fd.c  \
-			
 			  
+SRCS_BONUS	=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c
+	  
 OBJS		= ${SRCS:.c=.o}
+OBJS_BONUS  =  ${SRCS_BONUS:.c=.o}
 
-${NAME}	:
-			${CC} -c ${CFLAGS} ${SRCS} 
+${NAME}	:	${OBJS}
 			ar crs ${NAME} ${OBJS}
 
 all		:	${NAME}
 
+bonus   :  ${NAME}  ${OBJS_BONUS}
+			ar crs ${NAME} ${OBJS} ${OBJS_BONUS}
+
 clean	:
-		${RM} ${OBJS} *.h.gch a.out
+		${RM} ${OBJS} ${OBJS_BONUS} *.h.gch a.out
 	
 fclean	:	clean
 		${RM} ${NAME}
 
 re		:	fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

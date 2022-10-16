@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/15 14:14:59 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/10/16 14:07:59 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,20 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 /* Outputs the string ’s’ to the given file descriptor followed by a newline. */
 void	ft_putendl_fd(char *s, int fd);
-/**/
+/* Outputs int 'n' to the given file descriotor*/
 void	ft_putnbr_fd(int n, int fd);
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+/* make a new node*/
+t_list	*ft_lstnew(void *content);
+/* make a new node in first position*/
+void	ft_lstadd_front(t_list **lst, t_list *new);
+/* Counts the number of nodes in a list. */
+int		ft_lstsize(t_list *lst);
 
 #endif
