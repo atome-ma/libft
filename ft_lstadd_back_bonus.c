@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 13:50:42 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/16 14:30:22 by atome-ma         ###   ########.fr       */
+/*   Created: 2022/10/16 17:34:16 by atome-ma          #+#    #+#             */
+/*   Updated: 2022/10/16 18:32:31 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	num_nodes;
+	t_list	*ptr;
 
-	num_nodes = 0;
-	while (lst != NULL)
+	if (*lst == NULL)
+		*lst = new;
+	else
 	{
-		lst = lst->next;
-		num_nodes++;
+		ptr = ft_lstlast(*lst);
+		ptr->next = new;
 	}
-	return (num_nodes);
 }

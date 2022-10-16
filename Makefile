@@ -6,7 +6,7 @@
 #    By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 19:45:15 by atome-ma          #+#    #+#              #
-#    Updated: 2022/10/16 14:06:49 by atome-ma         ###   ########.fr        #
+#    Updated: 2022/10/16 17:36:42 by atome-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,8 @@ SRCS		= ft_isalnum.c  \
 			  ft_putendl_fd.c \
 			  ft_putnbr_fd.c  \
 			  
-SRCS_BONUS	=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c
+SRCS_BONUS	=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+				ft_lstlast_bonus.c ft_lstadd_back_bonus.c
 	  
 OBJS		= ${SRCS:.c=.o}
 OBJS_BONUS  =  ${SRCS_BONUS:.c=.o}
