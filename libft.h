@@ -6,7 +6,7 @@
 /*   By: atome-ma <atome-ma@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:45:22 by atome-ma          #+#    #+#             */
-/*   Updated: 2022/10/19 17:11:00 by atome-ma         ###   ########.fr       */
+/*   Updated: 2022/11/05 11:50:20 by atome-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+/* Converts the initial portion of the string pointed to
+by str to int representation. Discards any whitespace characters 
+until the first non-whitespace character is found, then takes as many
+ characters as possible to form a valid integer number representation 
+ and converts them to an integer value */
 int		ft_atoi(const char *str);
 char	*ft_strchr(const char *str, int ch);
 char	*ft_strrchr(const char *str, int ch);
@@ -89,8 +94,17 @@ between the first two differing bytes (treated as unsigned char values,
 strings are always identical.  This behavior is not required by C 
 and portable code should only depend on the sign of the returned value. */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+/*locates the first occurrence of the null-termi-
+nated string needle in the string haystack, where not more than len char-
+acters are searched.  Characters that appear after a `\0' character are
+not searched If needle is an empty string, haystack is returned; if needle occurs
+nowhere in haystack, NULL is returned; otherwise a pointer to the first
+character of the first occurrence of needle is returned.*/
 char	*ft_strnstr(const char *str, const char *substr, size_t len);
 void	*ft_calloc(size_t count, size_t size);
+/*The strdup() function allocates sufficient memory for a copy of the
+string s1, does the copy, and returns a pointer to it.  The pointer may
+subsequently be used as an argument to the function free(3).*/
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 /* Append string s1 and s2 in new string with malloc. 
@@ -102,6 +116,7 @@ the beginning and the end of the string*/
 char	*ft_strtrim(char const *s1, char const *set);
 /*Split Strings Based on Delimiter witch malloc and free*/
 char	**ft_split(char const *s, char c);
+/*function coverts the integer n into a character string*/
 char	*ft_itoa(int n);
 /*Applies the function f to each character of the
 string s to create a new string (with malloc(3))
